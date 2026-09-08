@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CHAMADAN AVENZO</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #0b0b0b;
+      color: white;
+    }
+
+    header {
+      padding: 25px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #111, #1d1d1d);
+      border-bottom: 1px solid #c9a227;
+    }
+
+    header h1 {
+      font-size: 30px;
+      letter-spacing: 4px;
+      color: #d4af37;
+    }
+
+    header p {
+      margin-top: 8px;
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    .hero {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 32px;
+      margin-bottom: 12px;
+    }
+
+    .hero span {
+      color: #d4af37;
+    }
+
+    .hero p {
+      color: #aaa;
+      max-width: 600px;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      padding: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: #151515;
+      border: 1px solid #292929;
+      border-radius: 18px;
+      overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: #d4af37;
+    }
+
+    .card img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-content {
+      padding: 18px;
+      text-align: center;
+    }
+
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: #999;
+      margin-bottom: 15px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 11px 24px;
+      border-radius: 30px;
+      background: #d4af37;
+      color: #111;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 30px;
+      text-align: center;
+      border-top: 1px solid #292929;
+      color: #777;
+    }
+
+    footer strong {
+      color: #d4af37;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>CHAMADAN AVENZO</h1>
+    <p>Premium travel collection</p>
+  </header>
+
+  <section class="hero">
+    <h2>Sayohatni <span>premium</span> darajaga olib chiqing</h2>
+    <p>
+      Zamonaviy dizayn, mustahkam korpus va qulay foydalanish.
+      O'zingizga mos chamadonni tanlang.
+    </p>
+  </section>
+
+  <section class="products">
+
+    <div class="card">
+      <img src="IMG_4235.jpeg" alt="Chamadon">
+      <div class="card-content">
+        <h3>Premium Collection</h3>
+        <p>Elegant Black</p>
+        <a class="button" href="#">Batafsil</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="IMG_4236.jpeg" alt="Chamadon">
+      <div class="card-content">
+        <h3>Premium Collection</h3>
+        <p>Classic Brown</p>
+        <a class="button" href="#">Batafsil</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="IMG_4237.jpeg" alt="Chamadon">
+      <div class="card-content">
+        <h3>Premium Collection</h3>
+        <p>Modern Grey</p>
+        <a class="button" href="#">Batafsil</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="IMG_4238.jpeg" alt="Chamadon">
+      <div class="card-content">
+        <h3>Premium Collection</h3>
+        <p>Luxury Design</p>
+        <a class="button" href="#">Batafsil</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="IMG_4239.jpeg" alt="Chamadon">
+      <div class="card-content">
+        <h3>Premium Collection</h3>
+        <p>Travel Edition</p>
+        <a class="button" href="#">Batafsil</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="IMG_4240.jpeg" alt="Chamadon">
+      <div class="card-content">
+        <h3>Premium Collection</h3>
+        <p>Avenzo Edition</p>
+        <a class="button" href="#">Batafsil</a>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    © 2026 <strong>CHAMADAN AVENZO</strong>
+  </footer>
+
+</body>
+</html>
