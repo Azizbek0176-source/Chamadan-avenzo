@@ -1,208 +1,418 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>CHAMADAN AVENZO</title>
+<title>CHAMADAN AVENZO — Premium Collection</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #0b0b0b;
-      color: white;
-    }
+html {
+    scroll-behavior: smooth;
+}
 
-    header {
-      padding: 25px 20px;
-      text-align: center;
-      background: linear-gradient(135deg, #111, #1d1d1d);
-      border-bottom: 1px solid #c9a227;
-    }
+body {
+    font-family: Arial, sans-serif;
+    background: #080808;
+    color: #fff;
+}
 
-    header h1 {
-      font-size: 30px;
-      letter-spacing: 4px;
-      color: #d4af37;
-    }
+/* HEADER */
+header {
+    padding: 28px 20px;
+    text-align: center;
+    border-bottom: 1px solid #2d2d2d;
+    background: #090909;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
 
-    header p {
-      margin-top: 8px;
-      color: #aaa;
-      font-size: 14px;
+.logo {
+    color: #d4af37;
+    font-size: 27px;
+    font-weight: 700;
+    letter-spacing: 5px;
+}
+
+.tagline {
+    color: #888;
+    margin-top: 8px;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+/* HERO */
+.hero {
+    min-height: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 70px 20px;
+    background:
+        radial-gradient(circle at center, #24200f 0%, #0b0b0b 45%, #080808 75%);
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 8vw, 75px);
+    letter-spacing: 4px;
+    line-height: 1.05;
+    margin-bottom: 20px;
+}
+
+.gold {
+    color: #d4af37;
+}
+
+.hero p {
+    color: #aaa;
+    font-size: 16px;
+    line-height: 1.7;
+    max-width: 620px;
+    margin: auto;
+}
+
+.hero-button {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 32px;
+    border: 1px solid #d4af37;
+    border-radius: 30px;
+    color: #d4af37;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.hero-button:hover {
+    background: #d4af37;
+    color: #080808;
+}
+
+/* COLLECTION */
+.collection {
+    max-width: 1400px;
+    margin: auto;
+    padding: 70px 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title h2 {
+    font-size: 34px;
+    letter-spacing: 2px;
+}
+
+.section-title p {
+    color: #777;
+    margin-top: 10px;
+}
+
+/* PRODUCTS */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+}
+
+.card {
+    background: linear-gradient(145deg, #181818, #0e0e0e);
+    border: 1px solid #292929;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: .35s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #d4af37;
+    box-shadow: 0 15px 45px rgba(212,175,55,.12);
+}
+
+.card-image {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    background: #111;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: .5s;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+.card-content {
+    padding: 22px;
+    text-align: center;
+}
+
+.card-content h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.card-content p {
+    color: #888;
+    margin-bottom: 18px;
+}
+
+.button {
+    display: inline-block;
+    padding: 11px 25px;
+    border-radius: 30px;
+    background: #d4af37;
+    color: #111;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.button:hover {
+    background: #fff;
+}
+
+/* ABOUT */
+.about {
+    padding: 75px 20px;
+    text-align: center;
+    background: #0d0d0d;
+    border-top: 1px solid #222;
+    border-bottom: 1px solid #222;
+}
+
+.about-box {
+    max-width: 750px;
+    margin: auto;
+}
+
+.about h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    color: #999;
+    line-height: 1.8;
+}
+
+/* CONTACT */
+.contact {
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.contact h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.contact p {
+    color: #888;
+    margin-bottom: 25px;
+}
+
+/* FOOTER */
+footer {
+    padding: 30px 20px;
+    text-align: center;
+    border-top: 1px solid #292929;
+    color: #666;
+    font-size: 13px;
+}
+
+footer strong {
+    color: #d4af37;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .logo {
+        font-size: 21px;
+        letter-spacing: 3px;
     }
 
     .hero {
-      padding: 50px 20px;
-      text-align: center;
+        min-height: 390px;
+        padding: 55px 18px;
     }
 
-    .hero h2 {
-      font-size: 32px;
-      margin-bottom: 12px;
+    .hero h1 {
+        font-size: 40px;
     }
 
-    .hero span {
-      color: #d4af37;
-    }
-
-    .hero p {
-      color: #aaa;
-      max-width: 600px;
-      margin: auto;
-      line-height: 1.6;
+    .collection {
+        padding: 50px 15px;
     }
 
     .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 25px;
-      padding: 30px;
-      max-width: 1200px;
-      margin: auto;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
     }
 
-    .card {
-      background: #151515;
-      border: 1px solid #292929;
-      border-radius: 18px;
-      overflow: hidden;
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      border-color: #d4af37;
-    }
-
-    .card img {
-      width: 100%;
-      height: 320px;
-      object-fit: cover;
-      display: block;
+    .card-image {
+        height: 230px;
     }
 
     .card-content {
-      padding: 18px;
-      text-align: center;
+        padding: 15px 8px;
     }
 
-    .card h3 {
-      font-size: 20px;
-      margin-bottom: 8px;
+    .card-content h3 {
+        font-size: 15px;
     }
 
-    .card p {
-      color: #999;
-      margin-bottom: 15px;
+    .card-content p {
+        font-size: 13px;
     }
 
     .button {
-      display: inline-block;
-      padding: 11px 24px;
-      border-radius: 30px;
-      background: #d4af37;
-      color: #111;
-      text-decoration: none;
-      font-weight: bold;
+        padding: 9px 15px;
+        font-size: 12px;
     }
-
-    footer {
-      margin-top: 40px;
-      padding: 30px;
-      text-align: center;
-      border-top: 1px solid #292929;
-      color: #777;
-    }
-
-    footer strong {
-      color: #d4af37;
-    }
-  </style>
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <h1>CHAMADAN AVENZO</h1>
-    <p>Premium travel collection</p>
-  </header>
+<header>
+    <div class="logo">CHAMADAN AVENZO</div>
+    <div class="tagline">PREMIUM TRAVEL COLLECTION</div>
+</header>
 
-  <section class="hero">
-    <h2>Sayohatni <span>premium</span> darajaga olib chiqing</h2>
-    <p>
-      Zamonaviy dizayn, mustahkam korpus va qulay foydalanish.
-      O'zingizga mos chamadonni tanlang.
-    </p>
-  </section>
+<section class="hero">
+    <div class="hero-content">
+        <h1>Sayohatni <span class="gold">premium</span> darajaga olib chiqing</h1>
 
-  <section class="products">
+        <p>
+            Zamonaviy dizayn, mustahkam korpus va premium ko‘rinish.
+            O‘zingizga mos Avenzo chamadonini tanlang.
+        </p>
 
-    <div class="card">
-      <img src="IMG_4235.jpeg" alt="Chamadon">
-      <div class="card-content">
-        <h3>Premium Collection</h3>
-        <p>Elegant Black</p>
-        <a class="button" href="#">Batafsil</a>
-      </div>
+        <a href="#collection" class="hero-button">
+            COLLECTIONNI KO‘RISH
+        </a>
+    </div>
+</section>
+
+<section class="collection" id="collection">
+
+    <div class="section-title">
+        <h2>AVENZO COLLECTION</h2>
+        <p>Premium chamadonlar kolleksiyasi</p>
     </div>
 
-    <div class="card">
-      <img src="IMG_4236.jpeg" alt="Chamadon">
-      <div class="card-content">
-        <h3>Premium Collection</h3>
-        <p>Classic Brown</p>
-        <a class="button" href="#">Batafsil</a>
-      </div>
+    <div class="products">
+
+        <div class="card">
+            <div class="card-image">
+                <img src="IMG_4235.jpeg" alt="Avenzo Premium Black">
+            </div>
+            <div class="card-content">
+                <h3>Premium Collection</h3>
+                <p>Elegant Black</p>
+                <a href="#" class="button">Batafsil</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <img src="IMG_4236.jpeg" alt="Avenzo Classic Brown">
+            </div>
+            <div class="card-content">
+                <h3>Premium Collection</h3>
+                <p>Classic Brown</p>
+                <a href="#" class="button">Batafsil</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <img src="IMG_4237.jpeg" alt="Avenzo Modern Grey">
+            </div>
+            <div class="card-content">
+                <h3>Premium Collection</h3>
+                <p>Modern Grey</p>
+                <a href="#" class="button">Batafsil</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <img src="IMG_4238.jpeg" alt="Avenzo Luxury Design">
+            </div>
+            <div class="card-content">
+                <h3>Premium Collection</h3>
+                <p>Luxury Design</p>
+                <a href="#" class="button">Batafsil</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <img src="IMG_4239.jpeg" alt="Avenzo Travel Edition">
+            </div>
+            <div class="card-content">
+                <h3>Premium Collection</h3>
+                <p>Travel Edition</p>
+                <a href="#" class="button">Batafsil</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-image">
+                <img src="IMG_4240.jpeg" alt="Avenzo Edition">
+            </div>
+            <div class="card-content">
+                <h3>Premium Collection</h3>
+                <p>Avenzo Edition</p>
+                <a href="#" class="button">Batafsil</a>
+            </div>
+        </div>
+
     </div>
+</section>
 
-    <div class="card">
-      <img src="IMG_4237.jpeg" alt="Chamadon">
-      <div class="card-content">
-        <h3>Premium Collection</h3>
-        <p>Modern Grey</p>
-        <a class="button" href="#">Batafsil</a>
-      </div>
+<section class="about">
+    <div class="about-box">
+        <h2>AVENZO</h2>
+        <p>
+            Har bir sayohat o‘ziga xos. Avenzo esa uni yanada
+            zamonaviy va premium qiladi.
+        </p>
     </div>
+</section>
 
-    <div class="card">
-      <img src="IMG_4238.jpeg" alt="Chamadon">
-      <div class="card-content">
-        <h3>Premium Collection</h3>
-        <p>Luxury Design</p>
-        <a class="button" href="#">Batafsil</a>
-      </div>
-    </div>
+<section class="contact">
+    <h2>Biz bilan bog‘laning</h2>
+    <p>Mahsulotlar va buyurtmalar bo‘yicha murojaat qiling.</p>
+    <a href="#" class="button">Telegram</a>
+</section>
 
-    <div class="card">
-      <img src="IMG_4239.jpeg" alt="Chamadon">
-      <div class="card-content">
-        <h3>Premium Collection</h3>
-        <p>Travel Edition</p>
-        <a class="button" href="#">Batafsil</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="IMG_4240.jpeg" alt="Chamadon">
-      <div class="card-content">
-        <h3>Premium Collection</h3>
-        <p>Avenzo Edition</p>
-        <a class="button" href="#">Batafsil</a>
-      </div>
-    </div>
-
-  </section>
-
-  <footer>
-    © 2026 <strong>CHAMADAN AVENZO</strong>
-  </footer>
+<footer>
+    © 2026 <strong>CHAMADAN AVENZO</strong>. All rights reserved.
+</footer>
 
 </body>
 </html>
